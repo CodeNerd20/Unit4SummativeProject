@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            isOnGround = false;
         }
 
         powerupIndicator.transform.position = (Vector2)transform.position + new Vector2(0, 0.5f);
