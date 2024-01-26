@@ -67,5 +67,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collided with " + collision.gameObject.name + "with powerup set to " + hasPowerUp);
             enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode2D.Impulse);
         }
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
     }
 }
